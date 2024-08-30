@@ -1,7 +1,7 @@
 ﻿use master;
 go
 
-drop database colegio2024;
+--drop database colegio2024;
 
 create database colegio2024;
 go
