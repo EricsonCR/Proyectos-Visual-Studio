@@ -1,0 +1,52 @@
+﻿@model IEnumerable<waSistemaCobrosColegio.Models.Usuario>
+@{
+    ViewData["Title"] = "Listar Usuario";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Usuarios</h1>
+    <div class="mt-3 mb-3">
+        <a class="btn btn-primary" asp-action="Crear" asp-controller="Usuario">Crear Usuario</a>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table me-1"></i>
+            Lista Usuarios
+        </div>
+        <div class="card-body">
+            <table id="datatablesSimple">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Id)</th>
+                        <th>@Html.DisplayNameFor(model => model.Rol)</th>
+                        <th>@Html.DisplayNameFor(model => model.Numero_Documento)</th>
+                        <th>@Html.DisplayNameFor(model => model.Nombre_Completo)</th>
+                        <th>@Html.DisplayNameFor(model => model.Telefono)</th>
+                        <th>@Html.DisplayNameFor(model => model.Email)</th>
+                        <th>@Html.DisplayNameFor(model => model.Fecha_Acceso)</th>
+                        <th>Accion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Usuario usuario in Model)
+                    {
+                        <tr>
+                            <td>@usuario.Id</td>
+                            <td>@usuario.Rol</td>
+                            <td>@usuario.Numero_Documento</td>
+                            <td>@usuario.Nombre_Completo</td>
+                            <td>@usuario.Telefono</td>
+                            <td>@usuario.Email</td>
+                            <td>@usuario.Fecha_Acceso</td>
+                            <td>
+                                <a>Editar</a>
+                                <a>Detalle</a>
+                                <a>Eliminar</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

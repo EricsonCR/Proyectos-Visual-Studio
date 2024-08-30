@@ -1,0 +1,165 @@
+﻿@model waSistemaCobrosColegio.Models.Matricula
+
+@{
+    ViewData["Title"] = "Detalle";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+    var Estudiante = (Estudiante)ViewBag.Estudiante;
+    var Apoderado = (Apoderado)ViewBag.Apoderado;
+    var ListaMatriculaDetalle = (List<MatriculaDetalle>)ViewBag.MatriculaDetalle;
+}
+
+<div class="container mt-5">
+    <h1>Detalle Matricula: @Estudiante.Nombre_Completo</h1>
+    <hr />
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-header">
+                    <div><h2>Datos de Matricula</h2></div>
+                </div>
+                <div class="card-body row">
+                    <dt class="col-sm-6">@Html.DisplayNameFor(model => model.Id)</dt>
+                    <dd class="col-sm-6">@Html.DisplayFor(model => model.Id)</dd>
+                    <dt class="col-sm-6">@Html.DisplayNameFor(model => model.Id_Estudiante)</dt>
+                    <dd class="col-sm-6">@Html.DisplayFor(model => model.Id_Estudiante)</dd>
+                    <dt class="col-sm-6">@Html.DisplayNameFor(model => model.Id_Apoderado)</dt>
+                    <dd class="col-sm-6">@Html.DisplayFor(model => model.Id_Apoderado)</dd>
+                    <dt class="col-sm-6">@Html.DisplayNameFor(model => model.Periodo)</dt>
+                    <dd class="col-sm-6">@Html.DisplayFor(model => model.Periodo)</dd>
+                    <dt class="col-sm-6">@Html.DisplayNameFor(model => model.Nivel)</dt>
+                    <dd class="col-sm-6">@Html.DisplayFor(model => model.Nivel)</dd>
+                    <dt class="col-sm-6">@Html.DisplayNameFor(model => model.Grado)</dt>
+                    <dd class="col-sm-6">@Html.DisplayFor(model => model.Grado)</dd>
+                    <dt class="col-sm-6">@Html.DisplayNameFor(model => model.Seccion)</dt>
+                    <dd class="col-sm-6">@Html.DisplayFor(model => model.Seccion)</dd>
+                    <dt class="col-sm-6">@Html.DisplayNameFor(model => model.Situacion)</dt>
+                    <dd class="col-sm-6">@Html.DisplayFor(model => model.Situacion)</dd>
+                    <dt class="col-sm-6">@Html.DisplayNameFor(model => model.Descripcion)</dt>
+                    <dd class="col-sm-6">@Html.DisplayFor(model => model.Descripcion)</dd>
+                    <dt class="col-sm-6">@Html.DisplayNameFor(model => model.Fecha_Registro)</dt>
+                    <dd class="col-sm-6">@Html.DisplayFor(model => model.Fecha_Registro)</dd>
+                    <dt class="col-sm-6">@Html.DisplayNameFor(model => model.Fecha_Actualizacion)</dt>
+                    <dd class="col-sm-6">@Html.DisplayFor(model => model.Fecha_Actualizacion)</dd>
+                    <dt class="col-sm-6">@Html.DisplayNameFor(model => model.Estado)</dt>
+                    <dd class="col-sm-6">@Html.DisplayFor(model => model.Estado)</dd>
+                </div>
+                <div class="card-footer"></div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Datos Estudiante</h2>
+                </div>
+                <div class="card-body row">
+                    <dt class="col-sm-6">Codigo</dt>
+                    <dd class="col-sm-6">@Estudiante.Id</dd>
+                    <dt class="col-sm-6">Documento</dt>
+                    <dd class="col-sm-6">@Estudiante.Tipo_Documento</dd>
+                    <dt class="col-sm-6">Numero</dt>
+                    <dd class="col-sm-6">@Estudiante.Numero_Documento</dd>
+                    <dt class="col-sm-6">Nombre</dt>
+                    <dd class="col-sm-6">@Estudiante.Nombre_Completo</dd>
+                    <dt class="col-sm-6">Direccion</dt>
+                    <dd class="col-sm-6">@Estudiante.Direccion</dd>
+                    <dt class="col-sm-6">Telefono</dt>
+                    <dd class="col-sm-6">@Estudiante.Telefono</dd>
+                    <dt class="col-sm-6">Email</dt>
+                    <dd class="col-sm-6">@Estudiante.Email</dd>
+                    <dt class="col-sm-6">Genero</dt>
+                    <dd class="col-sm-6">@Estudiante.Genero</dd>
+                    <dt class="col-sm-6">Fecha Nacimiento</dt>
+                    <dd class="col-sm-6">@Estudiante.Fecha_Nacimiento</dd>
+                    <dt class="col-sm-6">Fecha Registro</dt>
+                    <dd class="col-sm-6">@Estudiante.Fecha_Registro</dd>
+                    <dt class="col-sm-6">Fecha Actualizacion</dt>
+                    <dd class="col-sm-6">@Estudiante.Fecha_Actualizacion</dd>
+                    <dt class="col-sm-6">Estado</dt>
+                    <dd class="col-sm-6">@Estudiante.Estado</dd>
+                </div>
+                <div class="card-footer"></div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Datos Apoderado</h2>
+                </div>
+                <div class="card-body row">
+                    <dt class="col-sm-6">Codigo</dt>
+                    <dd class="col-sm-6">@Apoderado.Id</dd>
+                    <dt class="col-sm-6">Documento</dt>
+                    <dd class="col-sm-6">@Apoderado.Tipo_Documento</dd>
+                    <dt class="col-sm-6">Numero</dt>
+                    <dd class="col-sm-6">@Apoderado.Numero_Documento</dd>
+                    <dt class="col-sm-6">Nombre</dt>
+                    <dd class="col-sm-6">@Apoderado.Nombre_Completo</dd>
+                    <dt class="col-sm-6">Direccion</dt>
+                    <dd class="col-sm-6">@Apoderado.Direccion</dd>
+                    <dt class="col-sm-6">Telefono</dt>
+                    <dd class="col-sm-6">@Apoderado.Telefono</dd>
+                    <dt class="col-sm-6">Email</dt>
+                    <dd class="col-sm-6">@Apoderado.Email</dd>
+                    <dt class="col-sm-6">Genero</dt>
+                    <dd class="col-sm-6">@Apoderado.Relacion</dd>
+                    <dt class="col-sm-6">Fecha Nacimiento</dt>
+                    <dd class="col-sm-6">@Apoderado.Fecha_Nacimiento</dd>
+                    <dt class="col-sm-6">Fecha Registro</dt>
+                    <dd class="col-sm-6">@Apoderado.Fecha_Registro</dd>
+                    <dt class="col-sm-6">Fecha Actualizacion</dt>
+                    <dd class="col-sm-6">@Apoderado.Fecha_Actualizacion</dd>
+                    <dt class="col-sm-6">Estado</dt>
+                    <dd class="col-sm-6">@Apoderado.Estado</dd>
+                </div>
+                <div class="card-footer"></div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Datos Matricula Detalle</h2>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead class="table-primary">
+                            <tr>
+                                <th>Codigo</th>
+                                <th>Matricula</th>
+                                <th>Concepto</th>
+                                <th>Monto</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (MatriculaDetalle md in ListaMatriculaDetalle)
+                            {
+                                <tr>
+                                    <td>@md.Id</td>
+                                    <td>@md.Id_Matricula</td>
+                                    <td>@md.Concepto</td>
+                                    <td>@md.Monto</td>
+                                    <td>
+                                        @if (@md.Estado == "COMPLETADO")
+                                        {
+                                            <span class="text-bg-success p-1">@md.Estado</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="text-bg-danger p-1">@md.Estado</span>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer"></div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <a class="btn btn-primary" asp-action="Listar" asp-controller="Matricula">Regresar</a>
+</div>

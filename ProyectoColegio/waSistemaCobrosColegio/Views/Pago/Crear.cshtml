@@ -1,0 +1,252 @@
+﻿@model waSistemaCobrosColegio.Models.Pago
+@{
+    ViewData["Title"] = "Crear Pago";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+<div class="container col-sm-7 flex-row d-flex justify-content-center">
+    <div class="col-sm-6 ms-4">
+        <div class="card shadow-lg border-0 rounded-lg mt-5">
+            <div class="card-header">
+                <h4>Datos de Matricula</h4>
+            </div>
+            <div class="card-body">
+                <div class="row mb-3">
+                    <div class="col-sm align-content-center">
+                        <div class="d-grid">
+                            <button class="btn btn-primary fw-semibold fs-5" id="btn_buscar_matriculado" type="button">Buscar Estudiante Matriculado</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="form-floating col-sm-6">
+                        <input class="form-control fw-bold" id="txt_nombre_estudiante" type="text" placeholder="" readonly />
+                        <label class="ms-2" for="">Nombre Estudiante</label>
+                    </div>
+                    <div class="form-floating col-sm-6">
+                        <input class="form-control fw-bold" id="txt_dni_estudiante" type="text" placeholder="" readonly />
+                        <label class="ms-2" for="">Dni Estudiante</label>
+                    </div>
+                </div>
+                <div class="row mb-3 form-floating px-2">
+                    <input class="form-control fw-bold" id="txt_nombre_apoderado" type="text" placeholder="" readonly />
+                    <label class="ms-2" for="">Nombre Apoderado</label>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-4 form-floating">
+                        <input class="form-control fw-bold" id="txt_id_estudiante" type="text" placeholder="" readonly />
+                        <label class="ms-2" for="">Cod. Estudiante</label>
+                    </div>
+                    <div class="col-md-4 form-floating">
+                        <input class="form-control fw-bold" id="txt_id_matricula" type="text" placeholder="" readonly />
+                        <label class="ms-2" for="">Matricula</label>
+                    </div>
+                    <div class="col-md-4 form-floating">
+                        <input class="form-control fw-bold" id="txt_periodo" type="text" placeholder="" readonly />
+                        <label class="ms-2" for="">Periodo</label>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-4 form-floating">
+                        <input class="form-control fw-bold" id="txt_nivel" type="text" placeholder="" readonly />
+                        <label class="ms-2" for="">Nivel</label>
+                    </div>
+                    <div class="col-md-4 form-floating">
+                        <input class="form-control fw-bold" id="txt_grado" type="text" placeholder="" readonly />
+                        <label class="ms-2" for="">Grado</label>
+                    </div>
+                    <div class="col-md-4 form-floating">
+                        <input class="form-control fw-bold" id="txt_seccion" type="text" placeholder="" readonly />
+                        <label class="ms-2" for="">Seccion</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 ms-4">
+        <div class="card shadow-lg border-0 rounded-lg mt-5">
+            <div class="card-header">
+                <h4>Datos de Pago</h4>
+            </div>
+            <div class="card-body">
+                <div class="row mb-3">
+                    <div class="col-md-6 form-floating">
+                        <select class="form-select fw-bold" asp-for="Metodo_Pago" id="txt_metodo_pago" asp-items="@ViewBag.listaPeriodo"></select>
+                        <label class="ms-2" for="">Metodo Pago</label>
+                    </div>
+                    <div class="col-md-6 form-floating">
+                        <input class="form-control fw-bold" id="txt_numero_op" type="text" placeholder="" />
+                        <label class="ms-2" for="">Numero OP</label>
+                    </div>
+                </div>
+                <div class="row mb-3 px-2">
+                    <input type="file" class="form-control form-control-lg">
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md form-floating">
+                        <input class="form-control fw-bold" asp-for="Fecha_Registro" type="datetime" value="@DateTime.Now.ToShortDateString()" placeholder="" readonly />
+                        <label class="ms-2" for="">Fecha</label>
+                    </div>
+                    <div class="col-md-6 form-floating">
+                        <input class="form-control fw-bold" id="txt_monto_total" type="text" placeholder="" readonly />
+                        <label class="ms-2" for="">Monto Total</label>
+                    </div>
+                </div>
+                <div class="row mb-3 mt-4">
+                    <div class="col-sm align-content-center d-grid">
+                        <a class="btn btn-secondary fs-5" asp-action="Crear" asp-controller="Pago">Limpiar</a>
+                    </div>
+                    <div class="col-sm align-content-center d-grid">
+                        <button class="btn btn-secondary fs-5" id="btn_calcular_pago" type="button">Calcular</button>
+                    </div>
+                </div>
+                <div class="row mb-3 mt-4">
+                    <div class="col-sm align-content-center d-grid">
+                        <button class="btn btn-success fs-4 fw-semibold" id="btn_pagar" disabled type="button">Pagar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal_matriculados" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Estudiantes Matriculados</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <i class="fas fa-table me-1"></i>
+                        DataTable Example
+                    </div>
+                    <div class="card-body" id="tabla_matriculados">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div class="container" id="zona_matricula_detalle" style="display:none">
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table me-1"></i>
+            DataTable Example
+        </div>
+        <div class="card-body" id="tabla_matricula_detalle">
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        var Pago = {};
+        var Estudiante = {};
+        var Matricula = {};
+        var Matricula_Detalle = [];
+        var Monto_Total = 0;
+
+        $(document).ready(function () {
+            $("#btn_buscar_matriculado").click(function () {
+                $("#tabla_matriculados").load("@Url.Action("ListarMatriculados", "Estudiante")");
+                $("#modal_matriculados").modal("show");
+            });
+            $("#tabla_matriculados").on("click", "tbody tr", function () {
+                Estudiante.Id = $(this).find("td").eq(0).text();
+                Estudiante.Dni = $(this).find("td").eq(1).text();
+                Estudiante.Nombre = $(this).find("td").eq(2).text();
+                buscar_matricula(Estudiante.Id);
+                $("#txt_nombre_estudiante").val(Estudiante.Nombre);
+                $("#txt_dni_estudiante").val(Estudiante.Dni);
+                $("#txt_id_estudiante").val(Estudiante.Id);
+                $("#txt_monto_total").val("");
+                $("#btn_pagar").text("Pagar");
+                $("#btn_pagar").prop("disabled", true);
+                $("#modal_matriculados").modal("hide");
+            });
+            $("#tabla_matricula_detalle").on("click", "tbody tr input", function () {
+                Matricula_Detalle = [];
+                Monto_Total = 0;
+                $("#tabla_matricula_detalle tbody tr").each(function (row, tr) {
+                    var state = $(tr).find("input:checkbox").is(":checked");
+                    if (state) {
+                        Matricula_Detalle.push({
+                            //Seleccion: $(tr).find("input:checkbox").is(":checked"),
+                            Id_Matricula_Detalle: $(tr).find("td:eq(1)").text(),
+                            //Id_Matricula: $(tr).find("td:eq(2)").text(),
+                            Concepto: $(tr).find("td:eq(3)").text(),
+                            Monto: $(tr).find("td:eq(4)").text(),
+                            //Estado: $(tr).find("td:eq(5)").text()
+                        });
+                        Monto_Total += parseFloat($(tr).find("td:eq(4)").text());
+                    }
+                });
+                $("#txt_monto_total").val(Monto_Total);
+                $("#btn_pagar").text("Pagar");
+                $("#btn_pagar").prop("disabled", true);
+                if (Monto_Total > 0) {
+                    $("#btn_pagar").text("S/ " + Monto_Total + " - Pagar");
+                    $("#btn_pagar").prop("disabled", false);
+                }
+            });
+            $("#btn_pagar").click(function () {
+                Pago = {};
+                Pago.Id_Matricula = Matricula.Id;
+                Pago.Monto_Total = Monto_Total;
+                Pago.Metodo_pago = $('#txt_metodo_pago').val();
+                Pago.Numero_Op = $('#txt_numero_op').val();
+                Pago.Pago_Detalle = Matricula_Detalle;
+                console.log(Pago);
+                $.ajax({
+                    type: "post",
+                    url: "/Pago/Crear",
+                    data: { pago: Pago },
+                    success: function (result) { mensaje(result); },
+                    error: function (status, error) { }
+                });
+            });
+        });
+        function mensaje(data) {
+            if (data == "OK") {
+                Swal.fire({
+                    title: 'Pago realizado correctamente',
+                    icon: "success"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.reload();
+                    }
+                });
+            } else { console.log(data); }
+        }
+        function buscar_matricula(id) {
+            $.ajax({
+                type: "get",
+                url: "/Matricula/JS_BuscarId",
+                data: { id: id },
+                success: function (result) { llenar_campos_matricula(result); },
+                error: function (status, error) { }
+            });
+        }
+        function llenar_campos_matricula(data) {
+            if (data != null) {
+                $("#txt_nivel").val(data.nivel);
+                $("#txt_grado").val(data.grado);
+                $("#txt_seccion").val(data.seccion);
+                $("#txt_periodo").val(data.periodo);
+                $("#txt_id_matricula").val(data.id);
+                Matricula.Id = data.id;
+                buscar_matricula_Detalle(Matricula.Id);
+            }
+        }
+        function buscar_matricula_Detalle(id) {
+            $("#tabla_matricula_detalle").load("@Url.Action("_ListarIdMatricula", "MatriculaDetalle")/" + id);
+            $("#zona_matricula_detalle").show();
+        }
+    </script>
+}

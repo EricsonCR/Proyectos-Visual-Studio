@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Pago>
+@{
+    ViewData["Title"] = "Listar Pagos";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Pagos</h1>
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table me-1"></i>
+            Lista Pagos
+        </div>
+        <div class="card-body">
+            <table id="datatablesSimple">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Id)</th>
+                        <th>@Html.DisplayNameFor(model => model.Id_Matricula)</th>
+                        <th>@Html.DisplayNameFor(model => model.Monto_Total)</th>
+                        <th>@Html.DisplayNameFor(model => model.Metodo_Pago)</th>
+                        <th>@Html.DisplayNameFor(model => model.Fecha_Registro)</th>
+                        <th>@Html.DisplayNameFor(model => model.Estado)</th>
+                        <th>Accion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Pago pago in Model)
+                    {
+                        <tr>
+                            <td>@pago.Id</td>
+                            <td>@pago.Id_Matricula</td>
+                            <td>@pago.Monto_Total</td>
+                            <td>@pago.Metodo_Pago</td>
+                            <td>@Html.ValueFor(modelItem => pago.Fecha_Registro, "{0:dd/MM/yyyy}")</td>
+                            <td>@pago.Estado</td>
+                            <td>
+                                <a>Editar</a>
+                                <a class="btn btn-secondary" asp-action="Detalle" asp-controller="Pago" asp-route-id="@pago.Id">Detalle</a>
+                                <a>Eliminar</a>
+                                <a asp-action="VerPdf" asp-controller="Pago" asp-route-id="@pago.Id" target="_blank">Ver PDF</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

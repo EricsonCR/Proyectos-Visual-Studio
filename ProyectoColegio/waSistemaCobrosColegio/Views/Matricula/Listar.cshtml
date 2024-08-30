@@ -1,0 +1,52 @@
+﻿@model IEnumerable<waSistemaCobrosColegio.Models.Matricula>
+@{
+    ViewData["Title"] = "Listar Matricula";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+    var listaEstudiante = (List<Estudiante>)ViewBag.listaEstudiante;
+}
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Matricula</h1>
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table me-1"></i>
+            Lista Matriculas
+        </div>
+        <div class="card-body">
+            <table id="datatablesSimple">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Id)</th>
+                        <th>@Html.DisplayNameFor(model => model.Id_Estudiante)</th>
+                        <th>@Html.DisplayNameFor(model => model.Periodo)</th>
+                        <th>@Html.DisplayNameFor(model => model.Nivel)</th>
+                        <th>@Html.DisplayNameFor(model => model.Grado)</th>
+                        <th>@Html.DisplayNameFor(model => model.Seccion)</th>
+                        <th>@Html.DisplayNameFor(model => model.Fecha_Registro)</th>
+                        <th>Accion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Matricula matricula in Model)
+                    {
+                        <tr>
+                            <td>@matricula.Id</td>
+                            <td>
+                                @listaEstudiante.Find(x => x.Id == matricula.Id_Estudiante)?.Nombre @listaEstudiante.Find(x => x.Id == matricula.Id_Estudiante)?.Apellido
+                            </td>
+                            <td>@matricula.Periodo</td>
+                            <td>@matricula.Nivel</td>
+                            <td>@matricula.Grado</td>
+                            <td>@matricula.Seccion</td>
+                            <td>@Html.ValueFor(modelItem => matricula.Fecha_Registro, "{0:dd/MM/yyyy}")</td>
+                            <td>
+                                <a>Editar</a>
+                                <a class="btn btn-secondary" asp-action="Detalle" asp-controller="Matricula" asp-route-id="@matricula.Id">Detalle</a>
+                                <a>Eliminar</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

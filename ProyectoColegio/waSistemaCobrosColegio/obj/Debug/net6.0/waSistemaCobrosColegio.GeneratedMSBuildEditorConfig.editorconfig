@@ -1,0 +1,131 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = waSistemaCobrosColegio
+build_property.RootNamespace = waSistemaCobrosColegio
+build_property.ProjectDir = C:\workspace-visual-studio-2022\ProyectoColegio\waSistemaCobrosColegio\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\workspace-visual-studio-2022\ProyectoColegio\waSistemaCobrosColegio
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/Acceso/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNvXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/Acceso/Registrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNvXFJlZ2lzdHJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/Apoderado/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBvZGVyYWRvXENyZWFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/Apoderado/Listar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBvZGVyYWRvXExpc3Rhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/Estudiante/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0dWRpYW50ZVxDcmVhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/Estudiante/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0dWRpYW50ZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/Estudiante/Listar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0dWRpYW50ZVxMaXN0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/Matricula/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0cmljdWxhXENyZWFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/Matricula/Detalle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0cmljdWxhXERldGFsbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/Matricula/Listar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWF0cmljdWxhXExpc3Rhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/Pago/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb1xDcmVhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/Pago/Detalle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb1xEZXRhbGxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/Pago/Listar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb1xMaXN0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/Shared/_LayoutLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/Shared/_LayoutPrincipal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRQcmluY2lwYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/Shared/_ListaApoderadosPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MaXN0YUFwb2RlcmFkb3NQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/Shared/_ListaEstudiantesPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MaXN0YUVzdHVkaWFudGVzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/Shared/_ListaPagoPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MaXN0YVBhZ29QYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/Shared/_MatriculaDetallePartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NYXRyaWN1bGFEZXRhbGxlUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/Usuario/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDcmVhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/Usuario/Listar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xMaXN0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/workspace-visual-studio-2022/ProyectoColegio/waSistemaCobrosColegio/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-h5ebu0jbkj

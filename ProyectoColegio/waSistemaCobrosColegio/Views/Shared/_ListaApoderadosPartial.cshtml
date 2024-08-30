@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Apoderado>
+
+<table id="tabla_lista_estudiantes" class="table table-striped" style="cursor: pointer;">
+    <thead>
+        <tr>
+            <th>Codigo</th>
+            <th>Dni</th>
+            <th>Nombre Completo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Apoderado estudiante in Model)
+        {
+            <tr>
+                <td>@estudiante.Id</td>
+                <td>@estudiante.Numero_Documento</td>
+                <td>@estudiante.Nombre_Completo</td>
+            </tr>
+        }
+    </tbody>
+</table>

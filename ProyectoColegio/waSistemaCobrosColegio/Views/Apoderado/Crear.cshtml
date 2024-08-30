@@ -1,0 +1,71 @@
+﻿@model waSistemaCobrosColegio.Models.Apoderado
+@{
+    ViewData["Title"] = "Crear Apoderado";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<form asp-action="Crear" asp-controller="Apoderado" method="post">
+    <div class="ms-2 mt-2 container col-sm-4">
+        <div class="card">
+            <div class="card-header">
+                <h2>Crear Apoderado</h2>
+            </div>
+            <div class="card-body">
+                <div class="mb-3 row">
+                    <div class="col-sm-3">
+                        <label class="form-label" asp-for="Tipo_Documento"></label>
+                        <select class="form-select" asp-for="Tipo_Documento" asp-items="@ViewBag.listaTiposDocumentos"></select>
+                    </div>
+                    <div class="col-sm-9">
+                        <label class="form-label" asp-for="Numero_Documento"></label>
+                        <input class="form-control" asp-for="Numero_Documento" />
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <div class="col-sm-6">
+                        <label class="form-label" asp-for="Nombre"></label>
+                        <input class="form-control" asp-for="Nombre" />
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="form-label" asp-for="Apellido"></label>
+                        <input class="form-control" asp-for="Apellido" />
+                    </div>
+                </div>
+                <div class="mb-3 col-sm-auto">
+                    <label class="form-label" asp-for="Direccion"></label>
+                    <input class="form-control" asp-for="Direccion" />
+                </div>
+                <div class="mb-3 row">
+                    <div class="col-sm-6">
+                        <label class="form-label" asp-for="Telefono"></label>
+                        <input class="form-control" asp-for="Telefono" />
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="form-label" asp-for="Email"></label>
+                        <input class="form-control" asp-for="Email" />
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-6">
+                        <label class="form-label" asp-for="Fecha_Nacimiento"></label>
+                        <input class="form-control" type="date" asp-for="Fecha_Nacimiento" value="@DateTime.Now" />
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="form-label" asp-for="Relacion"></label>
+                        <select class="form-select" asp-for="Relacion" asp-items="@ViewBag.listaRelacion"></select>
+                    </div>
+                    @* <div class="col-sm-3 align-content-end">
+                    <input class="form-check-input" type="checkbox" asp-for="Estado" />
+                    <label class="form-label" asp-for="Estado"></label>
+                    </div> *@
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="mb-2 mt-2">
+                    <button class="btn btn-primary" type="submit">Crear Apoderado</button>
+                    <a class="ms-2" asp-action="Listar" asp-controller="Apoderado">Regresar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

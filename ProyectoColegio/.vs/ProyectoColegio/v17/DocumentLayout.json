@@ -1,0 +1,133 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\workspace-visual-studio-2022\\ProyectoColegio\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7EB133AC-3536-413C-BA2D-80597355C4B2}|waSistemaCobrosColegio\\waSistemaCobrosColegio.csproj|c:\\workspace-visual-studio-2022\\proyectocolegio\\wasistemacobroscolegio\\querys\\query_tablas_insert.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{7EB133AC-3536-413C-BA2D-80597355C4B2}|waSistemaCobrosColegio\\waSistemaCobrosColegio.csproj|solutionrelative:wasistemacobroscolegio\\querys\\query_tablas_insert.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EB133AC-3536-413C-BA2D-80597355C4B2}|waSistemaCobrosColegio\\waSistemaCobrosColegio.csproj|c:\\workspace-visual-studio-2022\\proyectocolegio\\wasistemacobroscolegio\\controllers\\accesocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EB133AC-3536-413C-BA2D-80597355C4B2}|waSistemaCobrosColegio\\waSistemaCobrosColegio.csproj|solutionrelative:wasistemacobroscolegio\\controllers\\accesocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EB133AC-3536-413C-BA2D-80597355C4B2}|waSistemaCobrosColegio\\waSistemaCobrosColegio.csproj|c:\\workspace-visual-studio-2022\\proyectocolegio\\wasistemacobroscolegio\\views\\pago\\detalle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EB133AC-3536-413C-BA2D-80597355C4B2}|waSistemaCobrosColegio\\waSistemaCobrosColegio.csproj|solutionrelative:wasistemacobroscolegio\\views\\pago\\detalle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EB133AC-3536-413C-BA2D-80597355C4B2}|waSistemaCobrosColegio\\waSistemaCobrosColegio.csproj|c:\\workspace-visual-studio-2022\\proyectocolegio\\wasistemacobroscolegio\\views\\pago\\listar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EB133AC-3536-413C-BA2D-80597355C4B2}|waSistemaCobrosColegio\\waSistemaCobrosColegio.csproj|solutionrelative:wasistemacobroscolegio\\views\\pago\\listar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EB133AC-3536-413C-BA2D-80597355C4B2}|waSistemaCobrosColegio\\waSistemaCobrosColegio.csproj|c:\\workspace-visual-studio-2022\\proyectocolegio\\wasistemacobroscolegio\\views\\pago\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EB133AC-3536-413C-BA2D-80597355C4B2}|waSistemaCobrosColegio\\waSistemaCobrosColegio.csproj|solutionrelative:wasistemacobroscolegio\\views\\pago\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EB133AC-3536-413C-BA2D-80597355C4B2}|waSistemaCobrosColegio\\waSistemaCobrosColegio.csproj|c:\\workspace-visual-studio-2022\\proyectocolegio\\wasistemacobroscolegio\\controllers\\pagocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EB133AC-3536-413C-BA2D-80597355C4B2}|waSistemaCobrosColegio\\waSistemaCobrosColegio.csproj|solutionrelative:wasistemacobroscolegio\\controllers\\pagocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EB133AC-3536-413C-BA2D-80597355C4B2}|waSistemaCobrosColegio\\waSistemaCobrosColegio.csproj|c:\\workspace-visual-studio-2022\\proyectocolegio\\wasistemacobroscolegio\\querys\\query_tablas_insert.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{7EB133AC-3536-413C-BA2D-80597355C4B2}|waSistemaCobrosColegio\\waSistemaCobrosColegio.csproj|solutionrelative:wasistemacobroscolegio\\querys\\query_tablas_insert.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "query_tablas_insert.sql ",
+              "DocumentMoniker": "C:\\workspace-visual-studio-2022\\ProyectoColegio\\waSistemaCobrosColegio\\querys\\query_tablas_insert.sql",
+              "RelativeDocumentMoniker": "waSistemaCobrosColegio\\querys\\query_tablas_insert.sql",
+              "ToolTip": "C:\\workspace-visual-studio-2022\\ProyectoColegio\\waSistemaCobrosColegio\\querys\\query_tablas_insert.sql",
+              "RelativeToolTip": "waSistemaCobrosColegio\\querys\\query_tablas_insert.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-08-30T20:38:35.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccesoController.cs",
+              "DocumentMoniker": "C:\\workspace-visual-studio-2022\\ProyectoColegio\\waSistemaCobrosColegio\\Controllers\\AccesoController.cs",
+              "RelativeDocumentMoniker": "waSistemaCobrosColegio\\Controllers\\AccesoController.cs",
+              "ToolTip": "C:\\workspace-visual-studio-2022\\ProyectoColegio\\waSistemaCobrosColegio\\Controllers\\AccesoController.cs",
+              "RelativeToolTip": "waSistemaCobrosColegio\\Controllers\\AccesoController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T03:35:54.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Detalle.cshtml",
+              "DocumentMoniker": "C:\\workspace-visual-studio-2022\\ProyectoColegio\\waSistemaCobrosColegio\\Views\\Pago\\Detalle.cshtml",
+              "RelativeDocumentMoniker": "waSistemaCobrosColegio\\Views\\Pago\\Detalle.cshtml",
+              "ToolTip": "C:\\workspace-visual-studio-2022\\ProyectoColegio\\waSistemaCobrosColegio\\Views\\Pago\\Detalle.cshtml",
+              "RelativeToolTip": "waSistemaCobrosColegio\\Views\\Pago\\Detalle.cshtml",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAAEoAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-30T03:27:29.252Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Crear.cshtml",
+              "DocumentMoniker": "C:\\workspace-visual-studio-2022\\ProyectoColegio\\waSistemaCobrosColegio\\Views\\Pago\\Crear.cshtml",
+              "RelativeDocumentMoniker": "waSistemaCobrosColegio\\Views\\Pago\\Crear.cshtml",
+              "ToolTip": "C:\\workspace-visual-studio-2022\\ProyectoColegio\\waSistemaCobrosColegio\\Views\\Pago\\Crear.cshtml",
+              "RelativeToolTip": "waSistemaCobrosColegio\\Views\\Pago\\Crear.cshtml",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAEgAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-30T03:19:41.065Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Listar.cshtml",
+              "DocumentMoniker": "C:\\workspace-visual-studio-2022\\ProyectoColegio\\waSistemaCobrosColegio\\Views\\Pago\\Listar.cshtml",
+              "RelativeDocumentMoniker": "waSistemaCobrosColegio\\Views\\Pago\\Listar.cshtml",
+              "ToolTip": "C:\\workspace-visual-studio-2022\\ProyectoColegio\\waSistemaCobrosColegio\\Views\\Pago\\Listar.cshtml",
+              "RelativeToolTip": "waSistemaCobrosColegio\\Views\\Pago\\Listar.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACcAAACAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-28T18:27:35.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PagoController.cs",
+              "DocumentMoniker": "C:\\workspace-visual-studio-2022\\ProyectoColegio\\waSistemaCobrosColegio\\Controllers\\PagoController.cs",
+              "RelativeDocumentMoniker": "waSistemaCobrosColegio\\Controllers\\PagoController.cs",
+              "ToolTip": "C:\\workspace-visual-studio-2022\\ProyectoColegio\\waSistemaCobrosColegio\\Controllers\\PagoController.cs",
+              "RelativeToolTip": "waSistemaCobrosColegio\\Controllers\\PagoController.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAwwDsAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-24T23:54:18.743Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+<div class="container col-sm-6">
+    <div class="row justify-content-center">
+        <div class="col-lg-5">
+            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
+                <div class="card-body">
+                    <form asp-action="Login" asp-controller="Acceso" method="post">
+                        <div class="form-floating mb-3">
+                            <input class="form-control" name="email" type="email" placeholder="Email" />
+                            <label>Email</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" name="clave" type="password" placeholder="Contraseña" />
+                            <label>Cotraseña</label>
+                        </div>
+                        <div class="d-grid gap-2 mt-5">
+                            <button class="btn btn-primary" type="submit">Ingresar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-center py-3 mt-4">
+                    <div class="small">
+                        <a class="fs-6" asp-action="Registrar" asp-controller="Acceso">Registrar nuevo usuario aqui !</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    if ('@ViewBag.mensajeOk' != "") {
+        Swal.fire({
+            title: '@ViewBag.mensajeOk',
+            // text: "Presione <Enter> para continuar",
+            icon: "success"
+        });
+    }
+    if ('@ViewBag.mensajeError' != "") {
+        Swal.fire({
+            title: "@ViewBag.mensajeError",
+            icon: "error"
+        });
+    }
+</script>

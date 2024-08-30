@@ -1,0 +1,46 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace waSistemaCobrosColegio.Models
+{
+    public class Usuario
+    {
+        [Display(Name = "Codigo")]
+        public int Id { get; set; }
+
+        public string? Rol { get; set; }
+
+        [Display(Name = "Documento")]
+        public string? Tipo_Documento { get; set; }
+
+        [Display(Name = "Numero")]
+        public string? Numero_Documento { get; set; }
+        public string? Nombre { get; set; }
+        public string? Apellido { get; set; }
+
+        [Display(Name = "Nombre")]
+        public string? Nombre_Completo { get { return Nombre + " " + Apellido; } }
+        public string? Direccion { get; set; }
+        public string? Telefono { get; set; }
+
+        [Required]
+        public string? Email { get; set; }
+
+        [Required]
+        [Display(Name = "Contraseña")]
+        public string? Clave { get; set; }
+        public char? Genero { get; set; }
+
+        [Display(Name = "Fecha Nacimiento")]
+        public DateTime Fecha_Nacimiento { get; set; }
+
+        [Display(Name = "Fecha Registro")]
+        public DateTime Fecha_Registro { get; set; }
+
+        [Display(Name = "Fecha Actualizacion")]
+        public DateTime Fecha_Actualizacion { get; set; }
+
+        [Display(Name = "Fecha Acceso")]
+        public DateTime Fecha_Acceso { get; set; }
+        public bool Estado { get; set; }
+    }
+}

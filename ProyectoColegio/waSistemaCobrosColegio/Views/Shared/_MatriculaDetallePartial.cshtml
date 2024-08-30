@@ -1,0 +1,28 @@
+﻿@model IEnumerable<MatriculaDetalle>
+<table class="table table-striped">
+    <thead class="table-primary">
+        <tr>
+            <th>#</th>
+            <th>Codigo</th>
+            <th>Matricula</th>
+            <th>Concepto</th>
+            <th>Monto</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            @foreach (MatriculaDetalle md in Model)
+            {
+            <tr>
+                <td><input class="form-check-input" type="checkbox" /></td>
+                <td>@md.Id</td>
+                <td>@md.Id_Matricula</td>
+                <td>@md.Concepto</td>
+                <td>@md.Monto</td>
+                <td>@md.Estado</td>
+            </tr>
+            }
+        </tr>
+    </tbody>
+</table>

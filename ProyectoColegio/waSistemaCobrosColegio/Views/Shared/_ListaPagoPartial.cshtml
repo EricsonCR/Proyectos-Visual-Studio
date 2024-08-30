@@ -1,0 +1,46 @@
+﻿@model IEnumerable<MatriculaDetalle>
+
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Pagos</h1>
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table me-1"></i>
+            Lista de Pagos
+        </div>
+        <div class="card-body">
+            <table class="table" id="tabla_pagos">
+                <thead>
+                    <tr>
+                        <th>Seleccion</th>
+                        <th>Id</th>
+                        <th>Matricula</th>
+                        <th>Concepto</th>
+                        <th>Monto</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (MatriculaDetalle estudiante in Model)
+                    {
+                        <tr>
+                            <td><input type="checkbox" class="form-check-input" id="checkbox_select"></td>
+                            <td>@estudiante.Id</td>
+                            <td>@estudiante.Id_Matricula</td>
+                            <td>@estudiante.Concepto</td>
+                            <td>@estudiante.Monto</td>
+                            <td>@estudiante.Estado</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <table class="table" id="table_detalle" hidden>
+        <thead>
+            <tr>
+                <th>Id Matricula Detalle</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>

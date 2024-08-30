@@ -1,0 +1,52 @@
+﻿@model IEnumerable<waSistemaCobrosColegio.Models.Apoderado>
+@{
+    ViewData["Title"] = "Listar Apoderado";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Apoderados</h1>
+    <div class="mb-3">
+        <a class="btn btn-primary" asp-action="Crear" asp-controller="Apoderado">Crear Apoderado</a>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table me-1"></i>
+            Lista Apoderados
+        </div>
+        <div class="card-body">
+            <table id="datatablesSimple">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Id)</th>
+                        <th>@Html.DisplayNameFor(model => model.Numero_Documento)</th>
+                        <th>@Html.DisplayNameFor(model => model.Nombre)</th>
+                        <th>@Html.DisplayNameFor(model => model.Apellido)</th>
+                        <th>@Html.DisplayNameFor(model => model.Telefono)</th>
+                        <th>@Html.DisplayNameFor(model => model.Relacion)</th>
+                        <th>@Html.DisplayNameFor(model => model.Fecha_Nacimiento)</th>
+                        <th>Accion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Apoderado apoderado in Model)
+                    {
+                        <tr>
+                            <td>@apoderado.Id</td>
+                            <td>@apoderado.Numero_Documento</td>
+                            <td>@apoderado.Nombre</td>
+                            <td>@apoderado.Apellido</td>
+                            <td>@apoderado.Telefono</td>
+                            <td>@apoderado.Relacion</td>
+                            <td>@Html.ValueFor(modelItem => apoderado.Fecha_Nacimiento, "{0:dd/MM/yyyy}")</td>
+                            <td>
+                                <a>Editar</a>
+                                <a>Detalle</a>
+                                <a>Eliminar</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

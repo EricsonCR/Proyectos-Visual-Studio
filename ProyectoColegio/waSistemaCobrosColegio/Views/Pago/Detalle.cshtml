@@ -1,0 +1,81 @@
+﻿@model waSistemaCobrosColegio.Models.Pago
+
+@{
+    ViewData["Title"] = "Detalle";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+    var listaPagoDtalle = (List<PagoDetalle>)ViewBag.PagoDetalle;
+}
+
+<div class="container mt-5">
+    <h1>Detalle Pago</h1>
+    <hr />
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-header">
+                    <div><h2>Datos de Pago</h2></div>
+                </div>
+                <div class="card-body row">
+                    <dt class="col-sm-6">@Html.DisplayNameFor(model => model.Id)</dt>
+                    <dd class="col-sm-6">@Html.DisplayFor(model => model.Id)</dd>
+                    <dt class="col-sm-6">@Html.DisplayNameFor(model => model.Id_Matricula)</dt>
+                    <dd class="col-sm-6">@Html.DisplayFor(model => model.Id_Matricula)</dd>
+                    <dt class="col-sm-6">@Html.DisplayNameFor(model => model.Monto_Total)</dt>
+                    <dd class="col-sm-6">@Html.DisplayFor(model => model.Monto_Total)</dd>
+                    <dt class="col-sm-6">@Html.DisplayNameFor(model => model.Metodo_Pago)</dt>
+                    <dd class="col-sm-6">@Html.DisplayFor(model => model.Metodo_Pago)</dd>
+                    <dt class="col-sm-6">@Html.DisplayNameFor(model => model.Numero_Op)</dt>
+                    <dd class="col-sm-6">@Html.DisplayFor(model => model.Numero_Op)</dd>
+                    <dt class="col-sm-6">@Html.DisplayNameFor(model => model.Url_Voucher)</dt>
+                    <dd class="col-sm-6">@Html.DisplayFor(model => model.Url_Voucher)</dd>
+                    <dt class="col-sm-6">@Html.DisplayNameFor(model => model.Fecha_Registro)</dt>
+                    <dd class="col-sm-6">@Html.DisplayFor(model => model.Fecha_Registro)</dd>
+                    <dt class="col-sm-6">@Html.DisplayNameFor(model => model.Fecha_Actualizacion)</dt>
+                    <dd class="col-sm-6">@Html.DisplayFor(model => model.Fecha_Actualizacion)</dd>
+                    <dt class="col-sm-6">@Html.DisplayNameFor(model => model.Estado)</dt>
+                    <dd class="col-sm-6">@Html.DisplayFor(model => model.Estado)</dd>
+                </div>
+                <div class="card-footer"></div>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Datos Pago Detalle</h2>
+                </div>
+                <div class="card-body row">
+                    <table class="table table-striped">
+                        <thead class="table-primary">
+                            <tr>
+                                <th>Codigo</th>
+                                <th>Pago</th>
+                                <th>Matricula Detalle</th>
+                                <th>Concepto</th>
+                                <th>Monto</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (PagoDetalle detalle in listaPagoDtalle)
+                            {
+                                <tr>
+                                    <td>@detalle.Id</td>
+                                    <td>@detalle.Id_Pago</td>
+                                    <td>@detalle.Id_Matricula_Detalle</td>
+                                    <td>@detalle.Concepto</td>
+                                    <td>@detalle.Monto</td>
+                                    <td>@detalle.Estado</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer"></div>
+            </div>
+            <br />
+            <a class="btn btn-success" asp-action="VerPdf" asp-controller="Pago" asp-route-id="@Model.Id" target="_blank">Ver PDF</a>
+        </div>
+    </div>
+    <hr />
+    <a class="btn btn-primary" asp-action="Listar" asp-controller="Pago">Regresar</a>
+</div>

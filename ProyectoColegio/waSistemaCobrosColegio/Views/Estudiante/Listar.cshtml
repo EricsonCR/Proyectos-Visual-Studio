@@ -1,0 +1,49 @@
+﻿@model IEnumerable<waSistemaCobrosColegio.Models.Estudiante>
+@{
+    ViewData["Title"] = "Listar Estudiante";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Estudiante</h1>
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table me-1"></i>
+            Lista Estudiantes
+        </div>
+        <div class="card-body">
+            <table id="datatablesSimple">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Id)</th>
+                        <th>@Html.DisplayNameFor(model => model.Numero_Documento)</th>
+                        <th>@Html.DisplayNameFor(model => model.Nombre)</th>
+                        <th>@Html.DisplayNameFor(model => model.Apellido)</th>
+                        <th>@Html.DisplayNameFor(model => model.Direccion)</th>
+                        <th>@Html.DisplayNameFor(model => model.Telefono)</th>
+                        <th>@Html.DisplayNameFor(model => model.Fecha_Nacimiento)</th>
+                        <th>Accion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Estudiante estudiante in Model)
+                    {
+                        <tr>
+                            <td>@estudiante.Id</td>
+                            <td>@estudiante.Numero_Documento</td>
+                            <td>@estudiante.Nombre</td>
+                            <td>@estudiante.Apellido</td>
+                            <td>@estudiante.Direccion</td>
+                            <td>@estudiante.Telefono</td>
+                            <td>@Html.ValueFor(modelItem => estudiante.Fecha_Nacimiento, "{0:dd/MM/yyyy}")</td>
+                            <td>
+                                <a>Editar</a>
+                                <a>Detalle</a>
+                                <a>Eliminar</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

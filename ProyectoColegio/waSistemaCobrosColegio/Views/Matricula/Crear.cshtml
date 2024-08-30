@@ -1,0 +1,247 @@
+﻿@model waSistemaCobrosColegio.Models.Matricula
+@{
+    ViewData["Title"] = "Crear Matricula";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+<form asp-action="Crear" asp-controller="Matricula" method="post" onsubmit="">
+    <div class="ms-2 mt-2 container col-sm-5">
+        @*         @if (@ViewBag.mensajeError != null)
+        {
+        <div class="alert alert-danger alert-dismissible" role="alert">
+        <div>@ViewBag.mensajeError</div>
+        <button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        } *@
+        <div class="card">
+            <div class="card-header">
+                <h2>Crear Matricula</h2>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <h6>Datos Estudiante</h6>
+                </div>
+                <div class="mb-3 row">
+                    <div class="col-sm-1 align-content-end">
+                        <label class="form-label">DNI:</label>
+                    </div>
+                    <div class="col-sm-7">
+                        <input class="form-control" type="text" id="txt_dni_estudiante" readonly />
+                    </div>
+                    <div class="col-sm-4 text-end">
+                        <a class="btn btn-primary" id="btn_buscar_estudiante">Buscar Estudiante</a>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <div class="col-sm-3">
+                        <label class="form-label" asp-for="Id_Estudiante"></label>
+                        <input class="form-control" asp-for="Id_Estudiante" id="txt_id_estudiante" readonly />
+                    </div>
+                    <div class="col-sm-9">
+                        <label class="form-label">Nombre Completo</label>
+                        <input class="form-control" id="txt_nombre_completo_estudiante" readonly />
+                    </div>
+                </div>
+                <hr />
+                <div class="mb-3">
+                    <h6>Datos Apoderado</h6>
+                </div>
+                <div class="mb-3 row">
+                    <div class="col-sm-1 align-content-end">
+                        <label class="form-label">DNI:</label>
+                    </div>
+                    <div class="col-sm-7">
+                        <input class="form-control" type="text" id="txt_dni_apoderado" />
+                    </div>
+                    <div class="col-sm-4 text-end">
+                        <a class="btn btn-primary" id="btn_buscar_apoderado">Buscar Apoderado</a>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <div class="col-sm-3">
+                        <label class="form-label" asp-for="Id_Apoderado"></label>
+                        <input class="form-control" asp-for="Id_Apoderado" id="txt_id_apoderado" readonly />
+                    </div>
+                    <div class="col-sm-9">
+                        <label class="form-label">Nombre Completo</label>
+                        <input class="form-control" id="txt_nombre_completo_apoderado" readonly />
+                    </div>
+                </div>
+                <hr />
+                <div class="mb-3">
+                    <h6>Datos Matricula</h6>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <label class="form-label" asp-for="Periodo"></label>
+                        <select class="form-select" asp-for="Periodo" asp-items="@ViewBag.listaPeriodo"></select>
+                    </div>
+                    <div class="col-sm-3">
+                        <label class="form-label" asp-for="Nivel"></label>
+                        <select class="form-select" asp-for="Nivel" asp-items="@ViewBag.listaNivel"></select>
+                    </div>
+                    <div class="col-sm-3">
+                        <label class="form-label" asp-for="Grado"></label>
+                        <select class="form-select" asp-for="Grado" asp-items="@ViewBag.listaGrado"></select>
+                    </div>
+                    <div class="col-sm-3">
+                        <label class="form-label" asp-for="Seccion"></label>
+                        <select class="form-select" asp-for="Seccion" asp-items="@ViewBag.listaSeccion"></select>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <label class="form-label" asp-for="Situacion"></label>
+                        <select class="form-select" asp-for="Situacion" asp-items="@ViewBag.listaSituacion"></select>
+                    </div>
+                    <div class="col-sm-9">
+                        <label class="form-label" asp-for="Descripcion"></label>
+                        <input class="form-control" asp-for="Descripcion" id="txt_id_descripcion" />
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="mb-2 mt-2">
+                    <button class="btn btn-primary" id="btn_crear_matricula" type="submit">Crear Matricula</button>
+                    <a class="ms-2" asp-action="Listar" asp-controller="Matricula">Regresar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="modal fade" id="ListarEstudiantes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Lista Estudiantes</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="zonaEstudiantes">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="ListarApoderados" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Lista Aoderados</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="zonaApoderados">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        if ('@ViewBag.mensajeOk' != "") {
+            Swal.fire({
+                title: '@ViewBag.mensajeOk',
+                // text: "Presione <Enter> para continuar",
+                icon: "success"
+            });
+        }
+        if ('@ViewBag.mensajeError' != "") {
+            Swal.fire({
+                title: "@ViewBag.mensajeError",
+                icon: "error"
+            });
+        }
+
+        $(document).ready(function () {
+            $("#btn_buscar_estudiante").click(function () {
+                $("#zonaEstudiantes").load("@Url.Action("ListarEstudiantes", "Estudiante")");
+                $("#ListarEstudiantes").modal("show");
+            });
+
+            $("#zonaEstudiantes").on('click', '#tabla_lista_estudiantes>tbody>tr', function () {
+                var Codigo = $(this).find("td").eq(0).text();
+                var Dni = $(this).find("td").eq(1).text();
+                var Nombre = $(this).find("td").eq(2).text();
+                var dni_estudiante = Dni;
+                $.ajax({
+                    type: "GET",
+                    url: "/Estudiante/LeerEstudiantePorDni",
+                    data: { dni: dni_estudiante },
+                    success: function (result) {
+                        $("#txt_id_estudiante").val(result.id);
+                        $("#txt_dni_estudiante").val(result.numero_Documento);
+                        $("#txt_nombre_completo_estudiante").val(result.nombre + " " + result.apellido);
+                        $("#ListarEstudiantes").modal("hide");
+                    },
+                    error: function (status, error) {
+                        console.log(status + "-" + error)
+                    }
+                });
+            });
+
+            $("#btn_buscar_apoderado").click(function () {
+                $("#zonaApoderados").load("@Url.Action("ListarApoderados", "Apoderado")");
+                $("#ListarApoderados").modal("show");
+            });
+
+            $("#zonaApoderados").on('click', '#tabla_lista_estudiantes>tbody>tr', function () {
+                var Codigo = $(this).find("td").eq(0).text();
+                var Dni = $(this).find("td").eq(1).text();
+                var Nombre = $(this).find("td").eq(2).text();
+                var dni_apoderado = Dni;
+                $.ajax({
+                    type: "GET",
+                    url: "/Apoderado/LeerApoderadoPorDni",
+                    data: { dni: dni_apoderado },
+                    success: function (result) {
+                        //console.log(result);
+                        $("#txt_id_apoderado").val(result.id);
+                        $("#txt_dni_apoderado").val(result.numero_Documento);
+                        $("#txt_nombre_completo_apoderado").val(result.nombre + " " + result.apellido);
+                        $("#ListarApoderados").modal("hide");
+                    },
+                    error: function (status, error) {
+                        console.log(status + "-" + error)
+                    }
+                });
+            });
+
+            // $('#btn_buscar_estudiante').click(function () {
+            //     var dni_estudiante = $('#txt_dni_estudiante').val();
+            //     $.ajax({
+            //         type: "GET",
+            //         url: "/Estudiante/LeerEstudiantePorDni",
+            //         data: { dni: dni_estudiante },
+            //         success: function (result) {
+            //             $("#txt_id_estudiante").val(result.idkkk);
+            //             $("#txt_nombre_completo_estudiante").val(result.nombre + " " + result.apellido);
+            //         },
+            //         error: function (status, error) {
+            //             console.log(status + "-" + error)
+            //         }
+            //     });
+            // });
+
+            // $('#btn_buscar_apoderado').click(function () {
+            //     var dni_apoderado = $('#txt_dni_apoderado').val();
+            //     $.ajax({
+            //         type: "GET",
+            //         url: "/Apoderado/LeerApoderadoPorDni",
+            //         data: { dni: dni_apoderado },
+            //         success: function (result) {
+            //             $("#txt_id_apoderado").val(result.id);
+            //             $("#txt_nombre_completo_apoderado").val(result.nombre + " " + result.apellido);
+            //         },
+            //         error: function (status, error) {
+            //             console.log(status + "-" + error)
+            //         }
+            //     });
+            // });
+        });
+    </script>
+}
